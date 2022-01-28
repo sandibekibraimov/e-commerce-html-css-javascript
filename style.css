@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* styling navigation */
+
+nav {
+  background-color: #000;
+  color: white;
+  padding: 1.2rem 2.5rem;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: lightgray;
+}
+
+.limitedOffer {
+  font-size: 1.2rem;
+  border-bottom: 1px solid green;
+  cursor: pointer;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem {
+  margin-right: 2rem;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* end of styling navigation */
+
+/* styling slider */
+.slider {
+  background: url('https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+
+.sliderItem {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.sliderImg {
+  z-index: 1;
+}
+
+.sliderBg {
+  height: 45rem;
+  width: 45rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  z-index: 1;
+}
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1;
+}
+
+.buyBtn {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 1rem 2rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.buyBtn:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.sliderItem:nth-child(1) .sliderBg {
+  background-color: lightskyblue;
+}
+
+.sliderItem:nth-child(2) .sliderBg {
+  background-color: rebeccapurple;
+}
+
+.sliderItem:nth-child(3) .sliderBg {
+  background-color: teal;
+}
+
+.sliderItem:nth-child(4) .sliderBg {
+  background-color: crimson;
+}
+
+.sliderItem:nth-child(5) .sliderBg {
+  background-color: coral;
+}
+
+.sliderItem:nth-child(1) .sliderPrice {
+  color: lightskyblue;
+}
+
+.sliderItem:nth-child(2) .sliderPrice {
+  color: rebeccapurple;
+}
+
+.sliderItem:nth-child(3) .sliderPrice {
+  color: teal;
+}
+
+.sliderItem:nth-child(4) .sliderPrice {
+  color: crimson;
+}
+
+.sliderItem:nth-child(5) .sliderPrice {
+  color: coral;
+}
+
+/* end of slider styling */
+
+/* styling features */
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureTitle {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 1.4rem;
+}
+
+.featureDesc {
+  color: gray;
+  width: 60%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.featureImg {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* end of features styling */
+
+/* product styling */
+
+.product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 26%, 100% 0, 100% 100%, 0 100%);
+}
+
+.productImg {
+  width: 50%;
+}
+
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  width: 40%;
+  padding: 3rem;
+}
+
+.productTitle {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.productPrice {
+  margin: 1.4rem 0;
+}
+
+.productDesc {
+  margin: 1.4rem 0;
+}
+
+.colors,
+.sizes {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.color {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  margin-right: 0.4rem;
+  cursor: pointer;
+  background-color: black;
+}
+.color:last-child {
+  background-color: darkblue;
+}
+
+.size {
+  padding: 0.2rem 0.8rem;
+  border: 1px solid black;
+  margin-right: 0.8rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.productBtn {
+  float: right;
+  background-color: black;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.productBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* end of product styling */
+
+/* styling payment */
+.paymentModal {
+  width: 35rem;
+  height: 35rem;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 2rem 4rem;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 10px 5px 10px 1px rgba(0, 0, 0, 0.67);
+  box-shadow: 10px 5px 10px 1px rgba(0, 0, 0, 0.67);
+}
+
+.paymentTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: gray;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.paymentInput {
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+
+.paymentInput::placeholder {
+  color: lightgrey;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.cardIcons {
+  display: flex;
+}
+
+.cardIcon {
+  width: 3rem;
+  margin-right: 0.6rem;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.payBtn {
+  position: absolute;
+  height: 50px;
+  bottom: -50px;
+  width: 100%;
+  left: 0;
+  border: none;
+  -webkit-box-shadow: 10px 5px 10px 1px rgba(0, 0, 0, 0.67);
+  box-shadow: 10px 5px 10px 1px rgba(0, 0, 0, 0.67);
+  color: white;
+  background-color: #369e62;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* end of styling payment */
+
+/* styling gallery */
+
+.gallery {
+  display: flex;
+  padding: 3rem;
+}
+.galleryItem {
+  flex: 1;
+  padding: 2rem;
+}
+
+.galleryImg {
+  width: 100%;
+}
+
+/* end of styling gallery */
+
+/* new season styling */
+
+.newSeason {
+  display: flex;
+}
+
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.nsImg {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.nsTitle {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+.nsBtn {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* end of new season styling */
+
+/* footer styling */
+
+footer {
+  display: flex;
+  align-items: center;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+.footerLeftMenuTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.menuList {
+  padding: 0;
+  list-style: none;
+}
+.listItem {
+  color: gray;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.footerRightMenu {
+  margin: 1rem 0;
+}
+
+.footerRightInput {
+  padding: 0.5rem;
+}
+
+.footerRightMenuTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.fMenuBtn {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.footerRightIcons {
+  display: flex;
+}
+
+.fIcon {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+.copyright {
+  color: gray;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+/* end of footer styling */
